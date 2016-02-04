@@ -1,0 +1,39 @@
+{
+  "name": "observ-sync-hash",
+  "main": "index.js",
+  "version": "0.0.0",
+  "description": "Synchronize an observable hash table with an array with primary keys",
+  "license": "MIT",
+  "repository": "bendrucker/observ-sync-hash",
+  "author": {
+    "name": "Ben Drucker",
+    "email": "bvdrucker@gmail.com",
+    "url": "bendrucker.me"
+  },
+  "scripts": {
+    "test": "standard && tape test.js"
+  },
+  "keywords": [
+    "observ",
+    "obserable",
+    "array",
+    "hash",
+    "varhash",
+    "observ-varhash",
+    "observ-array"
+  ],
+  "devDependencies": {
+    "observ-array": "~3.2.1",
+    "observ-varhash": "~1.0.8",
+    "standard": "^5.0.0",
+    "tape": "^4.0.0"
+  },
+  "files": [
+    "index.js"
+  ],
+  "dependencies": {
+    "array-differ": "~1.0.0",
+    "negate": "~1.0.0",
+    "value-get": "~1.0.0"
+  }
+}
