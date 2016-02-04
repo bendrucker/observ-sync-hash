@@ -14,21 +14,21 @@ test(function (t) {
   array.push({id: 1}, {id: 2})
 
   t.deepEqual(hash(), {
-    1: {},
-    2: {}
+    1: null,
+    2: null
   }, 'adds hash items')
 
   array.splice(0, 1)
 
   t.deepEqual(hash(), {
-    2: {}
+    2: null
   }, 'removes hash items')
 
   unlisten()
 
   array.splice(0, 1)
   t.deepEqual(hash(), {
-    2: {}
+    2: null
   }, 'unlisten')
 
   t.end()

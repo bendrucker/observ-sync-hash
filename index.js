@@ -15,7 +15,7 @@ function syncHash (array, hash, key) {
 
     // Add new items
     current.filter(negate(hash.get)).forEach(function (key) {
-      hash.put(key, {})
+      hash.put(key, null)
     })
 
     // Delete old items
