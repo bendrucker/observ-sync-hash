@@ -1,7 +1,7 @@
 {
   "name": "observ-sync-hash",
   "main": "index.js",
-  "version": "1.0.0",
+  "version": "2.0.0",
   "description": "Synchronize an observable hash table with an array with primary keys",
   "license": "MIT",
   "repository": "bendrucker/observ-sync-hash",
