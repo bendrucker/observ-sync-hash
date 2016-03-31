@@ -22,7 +22,7 @@ var hash = Hash({})
 
 sync(array, hash)
 
-array.push({id: 123})
+array.push(123)
 hash()
 //=> {123: null}
 
@@ -53,10 +53,9 @@ An [observable hash](https://github.com/nrw/observ-varhash)
 
 ##### key
 
-Type: `string`  
-Default: `'id'`
+Type: `string`
 
-The identifying key in each array item that will be used as the storage key in the hash.
+If provided, the hash keys will be derived from a property of each array item instead of the string values themselves. You can use `id` or even dot syntax, e.g. `foo.id`.
 
 
 ## License
