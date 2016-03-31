@@ -20,6 +20,8 @@ var Hash = require('observ-varhash')
 var array = ObservArray([])
 var hash = Hash({})
 
+sync(array, hash)
+
 array.push({id: 123})
 hash()
 //=> {123: null}
