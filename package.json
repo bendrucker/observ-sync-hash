@@ -33,7 +33,6 @@
   ],
   "dependencies": {
     "array-differ": "~1.0.0",
-    "negate": "~1.0.0",
     "value-get": "~1.0.0"
   }
 }
