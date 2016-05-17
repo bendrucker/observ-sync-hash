@@ -51,11 +51,20 @@ Type: `function`
 
 An [observable hash](https://github.com/nrw/observ-varhash)
 
+##### options
+
 ##### key
 
 Type: `string`
 
 If provided, the hash keys will be derived from a property of each array item instead of the string values themselves. You can use `id` or even dot syntax, e.g. `foo.id`.
+
+###### values
+
+Type: `boolean`  
+Default: `false`
+
+If `true`, data from the array will be added to the hash instead of `null` values. 
 
 
 ## License
