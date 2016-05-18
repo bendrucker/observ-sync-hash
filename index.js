@@ -19,7 +19,7 @@ function syncHash (array, hash, options) {
     // Add new items
     current.forEach(function (key, index) {
       if (hash.get(key)) return
-      hash.put(key, values ? items[index] : null)
+      hash.put(key, values ? array.get(index) : null)
     })
 
     // Delete old items

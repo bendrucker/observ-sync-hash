@@ -3,6 +3,7 @@
 var test = require('tape')
 var ObservArray = require('observ-array')
 var Hash = require('observ-varhash')
+var Observ = require('observ')
 var sync = require('./')
 
 test('simple', function (t) {
@@ -98,21 +99,25 @@ test('options.values', function (t) {
 
   var unlisten = sync(array, hash, {key: 'id', values: true})
 
-  array.push({id: 1, foo: 'a'}, {id: 2, foo: 'b'})
+  var item1 = Observ({id: 1, foo: 'a'})
+  var item2 = Observ({id: 2, foo: 'b'})
+  array.push(item1, item2)
 
   t.deepEqual(hash(), {
     1: {id: 1, foo: 'a'},
     2: {id: 2, foo: 'b'}
   }, 'adds hash items with values')
 
-  // Saves references to values
-  t.equal(hash()['1'], array()[0], 'saves reference')
+  t.equal(hash[1], item1, 'saves observ reference')
+  t.equal(hash[2], item2, 'saves observ reference')
 
   array.splice(0, 1)
 
   t.deepEqual(hash(), {
     2: {id: 2, foo: 'b'}
   }, 'removes hash items with values')
+
+  t.equal(hash[2], item2, 'saves observ reference')
 
   unlisten()
 
