@@ -1,4 +1,4 @@
-# observ-sync-hash [![Build Status](https://travis-ci.org/bendrucker/observ-sync-hash.svg?branch=master)](https://travis-ci.org/bendrucker/observ-sync-hash)
+# observ-sync-hash [![Build Status](https://travis-ci.org/bendrucker/observ-sync-hash.svg?branch=master)](https://travis-ci.org/bendrucker/observ-sync-hash) [![Greenkeeper badge](https://badges.greenkeeper.io/bendrucker/observ-sync-hash.svg)](https://greenkeeper.io/)
 
 > Synchronize an observable hash table with an array with primary keys
 

@@ -41,7 +41,7 @@ test('key (backwards compatible string)', function (t) {
 
   var unlisten = sync(array, hash, 'id')
 
-  array.push({id: 1}, {id: 2})
+  array.push({ id: 1 }, { id: 2 })
 
   t.deepEqual(hash(), {
     1: null,
@@ -68,9 +68,9 @@ test('key (options.key)', function (t) {
   var array = ObservArray([])
   var hash = Hash({})
 
-  var unlisten = sync(array, hash, {key: 'id'})
+  var unlisten = sync(array, hash, { key: 'id' })
 
-  array.push({id: 1}, {id: 2})
+  array.push({ id: 1 }, { id: 2 })
 
   t.deepEqual(hash(), {
     1: null,
@@ -97,15 +97,15 @@ test('options.values', function (t) {
   var array = ObservArray([])
   var hash = Hash({})
 
-  var unlisten = sync(array, hash, {key: 'id', values: true})
+  var unlisten = sync(array, hash, { key: 'id', values: true })
 
-  var item1 = Observ({id: 1, foo: 'a'})
-  var item2 = Observ({id: 2, foo: 'b'})
+  var item1 = Observ({ id: 1, foo: 'a' })
+  var item2 = Observ({ id: 2, foo: 'b' })
   array.push(item1, item2)
 
   t.deepEqual(hash(), {
-    1: {id: 1, foo: 'a'},
-    2: {id: 2, foo: 'b'}
+    1: { id: 1, foo: 'a' },
+    2: { id: 2, foo: 'b' }
   }, 'adds hash items with values')
 
   t.equal(hash[1], item1, 'saves observ reference')
@@ -114,7 +114,7 @@ test('options.values', function (t) {
   array.splice(0, 1)
 
   t.deepEqual(hash(), {
-    2: {id: 2, foo: 'b'}
+    2: { id: 2, foo: 'b' }
   }, 'removes hash items with values')
 
   t.equal(hash[2], item2, 'saves observ reference')
@@ -123,7 +123,7 @@ test('options.values', function (t) {
 
   array.splice(0, 1)
   t.deepEqual(hash(), {
-    2: {id: 2, foo: 'b'}
+    2: { id: 2, foo: 'b' }
   }, 'unlisten')
 
   t.end()
