@@ -33,7 +33,7 @@
     "index.js"
   ],
   "dependencies": {
-    "array-differ": "~2.0.3",
+    "array-differ": "~2.1.0",
     "value-get": "~1.0.0"
   }
 }
